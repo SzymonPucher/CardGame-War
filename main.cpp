@@ -1,3 +1,5 @@
+// Program created by Szymon Pucher
+
 #include <iostream>
 #include <stdlib.h>
 #include <vector>
