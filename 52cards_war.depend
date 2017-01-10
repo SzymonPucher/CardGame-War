@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1484068694 source:c:\users\spuch\dropbox\pliki dropbox\studia\3rd semester\object-oriented programming\labolatories\lab 3\52cards_war\main.cpp
+	<iostream>
+	<stdlib.h>
+	<vector>
+	<time.h>
+
