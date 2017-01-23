@@ -26,6 +26,9 @@ int main()
     cout << "How many times would you like to play?  ";
     cin >> aot;
 
+
+    clock_t start = clock();
+
     for(int i = 0; i < aot; i++){
 
         for(int i = 0; i < 56; i++)
@@ -50,6 +53,7 @@ int main()
         while(!p1.empty() && !p2.empty()){ // game will continue until both players have cards in their decks
             counter++; // counts number of encounters in single game
             k=1; // used for wars
+
            /* Printing decks of players * /
             cout << "Player 1 cards: " << p1.size() << endl;
             for(int i = 0; i < p1.size(); i++)
@@ -99,6 +103,8 @@ int main()
         avg += counter; // caluclating avg
 
     }
+
+    cout << endl << "Time of execution: " << clock() - start << " ms" << endl;
 
     cout << "Player 1 won: " << p1w << " times" << endl;
     cout << "Player 2 won: " << p2w << " times" << endl;
