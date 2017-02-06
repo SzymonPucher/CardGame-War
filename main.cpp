@@ -22,7 +22,9 @@ int main()
     unsigned int cards[56]; // array with all cards, array with number of wins by player, counter of number of counters.
     unsigned int temp, k, aot, mx=0, mn=0, avg=0, counter, p1w=0, p2w=0;
     vector < unsigned int> p1, p2; // player 1 cards, player 2 cards
+
     srand(time(NULL));
+
     cout << "How many times would you like to play?  ";
     cin >> aot;
 
@@ -87,10 +89,10 @@ int main()
                     }
                     break;
                 }
-                k += 2; // for wars
+                k += 2; // increments in case when both players have the same cards
             }
         }
-        // Game ends!
+        // Game ends! ---------------------------
         if (p2.empty()) p1w++; // adding points for players after game, based on who won
         if (p1.empty()) p2w++;
         p1.clear(); // clearing vectors for next game
@@ -106,10 +108,10 @@ int main()
 
     cout << endl << "Time of execution: " << clock() - start << " ms" << endl;
 
-    cout << "Player 1 won: " << p1w << " times" << endl;
-    cout << "Player 2 won: " << p2w << " times" << endl;
-    cout << "Average amount of trials in game: " << avg/aot << endl;
-    cout << "Max of trials: " << mx << endl;
-    cout << "Min of trials: " << mn << endl;
+    cout << "Player 1 won: " << p1w << " wars" << endl;
+    cout << "Player 2 won: " << p2w << " wars" << endl;
+    cout << "Average amount of battles in war: " << avg/aot << endl;
+    cout << "Max of battles: " << mx << endl;
+    cout << "Min of battles: " << mn << endl;
     return 0;
 }
