@@ -31,7 +31,7 @@ int main()
     srand(time(NULL));
     cout << "This program plays war, the card game.\n";
     while(g != 4){
-            unsigned int temp, k, aot, mx=0, mn=0, avg=0, counter, p1w=0, p2w=0,p1size,p2size;
+            unsigned int temp, k, aot, mx=0, mn=0, wmn=0, wmx=0, all_battles=0, counter, p1w=0, p2w=0, p1size, p2size, all_wars=0, war_count;
             g = menu();
             system("cls");
             if(g == 1){
@@ -66,6 +66,7 @@ int main()
                     }
 
                     counter = 0; // default value of counter before war starts
+                    war_count = 0;
                     // Game starts!
                     while(!p1.empty() && !p2.empty()){ // game will continue until both players have cards in their decks
                         counter++; // counts number of encounters in single game
@@ -116,6 +117,7 @@ int main()
                                 break;
                             }
                             k += 2; // increments in case when both players have the same cards
+                            war_count++;
                         }
                     }
                     // Game ends! ---------------------------
@@ -128,17 +130,21 @@ int main()
 
                     if (mn > counter || mn == 0) mn = counter; // checking mimimal value
                     if (mx < counter) mx = counter; // checking maximal value
-                    avg += counter; // caluclating avg
-
+                    if (wmn > war_count || wmn == 0) wmn = war_count;
+                    if (wmx < war_count) wmx = war_count;
+                    all_battles += counter; // adding amount of battles in last game to counter of all battles
+                    all_wars += war_count;
                 }
 
                 cout << endl << "Time of execution: " << clock() - start << " ms" << endl;
-
-                cout << "Player 1 won: " << p1w << " wars" << endl;
-                cout << "Player 2 won: " << p2w << " wars" << endl;
-                cout << "Average amount of battles in war: " << avg/aot << endl;
-                cout << "Max of battles: " << mx << endl;
-                cout << "Min of battles: " << mn << endl;
+                cout << "Player 1 won " << p1w << " games" << endl;
+                cout << "Player 2 won " << p2w << " games" << endl;
+                cout << "Average amount of battles in game: " << all_battles/aot << endl;
+                cout << "Average amount of wars in game: " << all_wars/aot << endl;
+                cout << "Maximal amount of battles: " << mx << endl;
+                cout << "Minimal amount of battles: " << mn << endl;
+                cout << "Maximal amount of wars: " << wmx << endl;
+                cout << "Minimal amount of wars: " << wmn << endl;
         }
     }
     return 0;
