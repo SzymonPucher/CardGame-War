@@ -135,8 +135,8 @@ int main()
                     all_battles += counter; // adding amount of battles in last game to counter of all battles
                     all_wars += war_count;
                 }
-
-                cout << endl << "Time of execution: " << clock() - start << " ms" << endl;
+				
+                cout << endl << "Time of execution: " << float(clock() - start) / 1000 << " s" << endl;
                 cout << "Player 1 won " << p1w << " games" << endl;
                 cout << "Player 2 won " << p2w << " games" << endl;
                 cout << "Average amount of battles in game: " << all_battles/aot << endl;
