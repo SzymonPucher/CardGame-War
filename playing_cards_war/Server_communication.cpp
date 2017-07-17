@@ -1,6 +1,8 @@
-/*
+#include "Server_communication.h"
+/* */
+
 #include <iostream>
-#include <mysql.h>
+
 
 using namespace std;
 
@@ -8,14 +10,14 @@ MYSQL mysql, *connection;
 MYSQL_RES result;
 MYSQL_ROW row;
 
-char * ip = (char*)"192.168.49.131";
+char * ip = (char*)"localhost";
 char * usr = (char*)"root";
 char * pass = (char*)"admin";
-char * db = (char*)"vcs";
+char * db = (char*)"test";
 
 int query_state;
 
-int main(int argc, char **argv)
+int connect(int argc, char **argv)
 {
 	mysql_init(&mysql);
 
@@ -37,4 +39,4 @@ int main(int argc, char **argv)
 	mysql_close(&mysql);
 
 }
-*/
+/* */

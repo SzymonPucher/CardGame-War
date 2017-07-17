@@ -1,1 +1,1 @@
-#pragma once
+#include <C:\Program Files\MySQL\MySQL Connector.C 6.1\include\mysql.h>
