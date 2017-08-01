@@ -1,0 +1,9 @@
+Statistics_for_all_games_played: 
+
+Amount_of_games_played: 1234912
+Average_amount_of_battles: 341
+Average_amount_of_wars: 24
+Max_battles: 4040
+Min_battles: 16
+Max_wars: 304
+Min_wars: 1

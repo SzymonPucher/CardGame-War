@@ -1,4 +1,5 @@
 #include "war_game.h"
+#include "Local_data.h"
 
 void reset_variables(unsigned int& war_count, unsigned int& battle_count, unsigned int& p1w, unsigned int& p2w, unsigned long long int& all_battles, unsigned int& all_wars, unsigned int& mx, unsigned int& mn, unsigned int& wmx, unsigned int& wmn) {
 	// resets vairables between sets of games
@@ -161,6 +162,7 @@ void menu(vector < unsigned int>& p1, vector < unsigned int>& p2, unsigned int& 
 				percent_print(i, aog);
 			collect_stats(p1, p2, war_count, battle_count, p1w, p2w, all_battles, all_wars, mx, mn, wmx, wmn);
 		}
+		save_data(aog, all_battles/aog, all_wars/aog, mx, mn, wmx, wmn);
 		print_result(start, p1w, p2w, all_battles, aog, all_wars, mx, mn, wmx, wmn);
 		break;
 	}

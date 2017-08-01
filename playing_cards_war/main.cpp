@@ -1,9 +1,10 @@
 /*
 	This program plays war, the card game.
-	Program created by Szymon Pucher
+	Program created by Szymon Pucher.
 */
 
 #include "war_game.h"
+#include "Local_data.h"
 
 int main() {
 	/* */
@@ -14,8 +15,6 @@ int main() {
 	srand(time(NULL));
 
 	menu(p1, p2, war_count, battle_count, p1w, p2w, all_battles, all_wars, mx, mn, wmx, wmn);
-	return 0;
 	/* */
-
-
+	return 0;
 }
