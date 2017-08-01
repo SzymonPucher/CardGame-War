@@ -5,13 +5,13 @@ void save_data(unsigned long long int aot, int avg_battles, int avg_wars, int mx
 	// saves data to txt file, combining new data with already saved data.
 	unsigned long long int *data = new unsigned long long int[7];
 	data = load_data();
-	float percent = float(aot) / (aot + data[0]);
+	float weight = float(aot) / (aot + data[0]);
 	ofstream stats_file;
 	stats_file.open("war_statistics.txt");
 	stats_file << "Statistics_for_all_games_played: \n";
 	stats_file << "\nAmount_of_games_played: " << aot + data[0];
-	stats_file << "\nAverage_amount_of_battles: " << round(avg_battles*percent + data[1] * (1 - percent));
-	stats_file << "\nAverage_amount_of_wars: " << round(avg_wars*percent + data[2] * (1 - percent));
+	stats_file << "\nAverage_amount_of_battles: " << round(avg_battles*weight + data[1] * (1 - weight));
+	stats_file << "\nAverage_amount_of_wars: " << round(avg_wars*weight + data[2] * (1 - weight));
 	
 	if (data[3] > mx)
 		stats_file << "\nMax_battles: " << data[3];
