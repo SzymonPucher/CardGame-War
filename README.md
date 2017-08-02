@@ -2,10 +2,6 @@
 
 Program plays card game - war, with itself.
 
-## Installing
-
-No installation required. Simply compile .cpp files.
-
 ## Running the program
 
 Program runs in command line, follow the instructions. After playing many games, statistics from all games played on your machine will be stored in war_statistics.txt file.
