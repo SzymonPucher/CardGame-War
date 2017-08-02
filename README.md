@@ -4,7 +4,7 @@ Program plays card game - war, with itself.
 
 ## Installing
 
-Simply download .exe file. No installation required.
+No installation required. Simply compile .cpp files.
 
 ## Running the program
 
